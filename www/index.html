@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+      
+      if (page.matches('#zero-page')) {
+
+        page.querySelector('#push0-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        };
+      }
+      if (page.matches('#first-page')) {
+
+        page.querySelector('#push1-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        };
+        page.querySelector('#push2-button').onclick = function(){
+          document.querySelector('#navigator').pushPage('page3.html');
+        };
+        
+      } 
+
+      else if (page.matches('#second-page')) {
+
+        page.querySelector('#push3-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        };
+        page.querySelector('#push4-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page5.html');
+        };
+        
+      }
+
+      else if (page.matches('#third-page')) {
+
+        page.querySelector('#push5-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page6.html');
+        };
+        page.querySelector('#push6-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page7.html');
+        };
+        
+      }
+
+      else if (page.matches('#fourth-page')) {
+
+        page.querySelector('#push7-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page8.html');
+        };
+        page.querySelector('#push8-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page10.html');
+        };
+        
+      }
+
+      else if (page.matches('#fifth-page')) {
+
+        page.querySelector('#push9-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page9.html');
+        };
+        page.querySelector('#push10-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page9.html');
+        };
+        
+      }
+
+      else if (page.matches('#sixth-page')) {
+
+        page.querySelector('#push11-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page8.html');
+        };
+        page.querySelector('#push12-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page10.html');
+        };
+        
+      }
+
+      else if (page.matches('#seventh-page')) {
+
+        page.querySelector('#push13-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page8.html');
+        };
+        page.querySelector('#push14-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page10.html');
+        };
+      }
+
+      else if (page.matches('#eighth-page')) {
+
+        page.querySelector('#push15-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        };
+      }
+
+      else if (page.matches('#ninth-page')) {
+
+        page.querySelector('#push16-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        };
+      }
+
+      else if (page.matches('#ten-page')) {
+
+        page.querySelector('#push17-button').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        };
+      }
+
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator" page="page0.html"></ons-navigator>
+
+  <ons-template id="page0.html">
+    <ons-page id="zero-page">
+      <ons-toolbar>
+        <div class="center">〇〇診断テスト</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはアウトドアが好き？引きこもるのが好き？</p>
+        <ons-button id="push0-button">スタート</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">質問１</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>どちらかというと外で体を動かすのは好き</p>
+        <ons-button id="push1-button">はい</ons-button>
+        <ons-button id="push2-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page2.html">
+    <ons-page id="second-page">
+      <ons-toolbar>
+        <div class="center">質問２</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>テレビゲームが好き</p>
+        <ons-button id="push3-button">はい</ons-button>
+        <ons-button id="push4-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="page3.html">
+    <ons-page id="third-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">質問２</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>テレビゲームが好き</p>
+        <ons-button id="push5-button">はい</ons-button>
+        <ons-button id="push6-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page4.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">質問３</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>人と接するのはそんなに好きじゃない</p>
+        <ons-button id="push7-button">はい</ons-button>
+        <ons-button id="push8-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page5.html">
+    <ons-page id="fifth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">質問３</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>人と接するのはそんなに好きじゃない</p>
+        <ons-button id="push9-button">はい</ons-button>
+        <ons-button id="push10-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page6.html">
+    <ons-page id="sixth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">質問３</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>人と接するのはそんなに好きじゃない</p>
+        <ons-button id="push11-button">はい</ons-button>
+        <ons-button id="push12-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page7.html">
+    <ons-page id="seventh-page">
+      <ons-toolbar>
+        <div class="left"><on-back-button>back</ons-back-button></div>
+        <div class="center">質問３</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>人と接するのはそんなに好きじゃない</p>
+        <ons-button id="puth13-button">はい</ons-button>
+        <ons-button id="puth14-button">いいえ</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page8.html">
+    <ons-page id="eighth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">診断結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>もしかしたらあなたは引きこもる方が好きかもしれない</p>
+        <ons-button id="push15-button">戻る</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page9.html">
+    <ons-page id="ninth-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">診断結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはアウトドアも室内にこもることもどちらもそれなりに好きかもしれない</p>
+        <ons-button id="push16-button">戻る</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page10.html">
+    <ons-page id="ten-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>back</ons-back-button></div>
+        <div class="center">診断結果</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <p>あなたはアウトドア派かもしれない</p>
+        <ons-button id="push17-button">戻る</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>
